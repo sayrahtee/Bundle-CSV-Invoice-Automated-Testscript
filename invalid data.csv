@@ -1,0 +1,11 @@
+id,first_name,last_name,email,gender,ip_address
+error: undefined method `id' for nil:NilClass,Keefer,Greasley,kgreasley0@youtu.be,Male,241.36.180.41
+error: undefined method `id' for nil:NilClass,Warren,Garcia,wgarcia1@friendfeed.com,Male,1.27.74.6
+error: undefined method `id' for nil:NilClass,Maggy,Scandwright,mscandwright2@rakuten.co.jp,Female,146.16.17.211
+error: undefined method `id' for nil:NilClass,Lydon,Hunston,lhunston3@time.com,Male,168.57.240.16
+error: undefined method `id' for nil:NilClass,Adriano,Gumary,agumary4@google.es,Male,145.112.72.237
+error: undefined method `id' for nil:NilClass,Clea,Jacobson,cjacobson5@rambler.ru,Female,59.130.202.34
+error: undefined method `id' for nil:NilClass,Lilli,Skelbeck,lskelbeck6@washington.edu,Female,233.250.63.137
+error: undefined method `id' for nil:NilClass,Norman,Ladewig,nladewig7@quantcast.com,Male,8.158.199.0
+error: undefined method `id' for nil:NilClass,Codi,Stanworth,cstanworth8@netscape.com,Male,201.150.205.166
+error: undefined method `id' for nil:NilClass,De witt,Konertz,dkonertz9@alexa.com,Male,39.217.127.245
