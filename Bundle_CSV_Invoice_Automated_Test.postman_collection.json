@@ -22,6 +22,18 @@
 									"    pm.environment.set(\"invoice_id\", jsonData.id);    ",
 									"}); ",
 									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Assert response contains Company name\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Google\");",
+									"});",
+									"",
+									"pm.test(\"Assert response contains Company name\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Facebook\");",
+									"});",
+									"",
 									""
 								],
 								"type": "text/javascript"
@@ -166,9 +178,10 @@
 									"    pm.response.to.have.status(400);",
 									"});",
 									"",
-									"pm.test(\"Assert error\", function () {",
+									"pm.test(\"Assert invoice is not generated\", function () {",
 									"    pm.expect(pm.response.text()).to.include(\"error\");",
-									"});"
+									"});",
+									""
 								],
 								"type": "text/javascript"
 							}
