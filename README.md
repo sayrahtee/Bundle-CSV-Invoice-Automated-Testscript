@@ -2,7 +2,7 @@
 
 ## How to Run Test
 
-1.Pull repository to local 
+1. Pull repository to local 
 2. Install postman if postman not already on local
 3. **Import** Collection into Postman: File name - Bundle_CSV_Invoice_Automated_Test.postman_collection
 4. **Import** Environment into Postman: File name - Bundle_CSV_Invoice_Postman_Environment_Variable.postman_environment
