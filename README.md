@@ -1,7 +1,6 @@
-# bundle_invoice_test
-CSV Invoice
+# Bundle CSV Invoice Automated Testscript
 
-How to Run Test
+## How to Run Test
 
 1. **Import** Collection into Postman: File name - Bundle_CSV_Invoice_Automated_Test.postman_collection
 2. **Import** Environment into Postman: File name - Bundle_CSV_Invoice_Postman_Environment_Variable.postman_environment
