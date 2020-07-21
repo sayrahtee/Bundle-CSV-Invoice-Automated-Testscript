@@ -11,5 +11,5 @@
 7. Select Environment to run collection against i.e. Bundle_CSV_Invoice_Postman_Environment_Variable
 8. Set Iteration to 1
 9. Click on **Run Bundle_CSV_Invoice_Automated_Test** Button
-10. Test Result would be displayed after its run
+10. Test Result would be displayed when test execution is completed
 
