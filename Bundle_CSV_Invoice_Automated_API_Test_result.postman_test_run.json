@@ -1,0 +1,646 @@
+{
+	"id": "2d926f95-9f50-4b18-abc0-ff9f91e727db",
+	"name": "CSVInvoice",
+	"timestamp": "2020-07-21T11:42:35.932Z",
+	"collection_id": "8ac53e51-df48-4bb2-b50f-86fdb39168d4",
+	"folder_id": 0,
+	"environment_id": "93bea115-f2d6-436f-98dd-109c6659511f",
+	"totalPass": 36,
+	"totalFail": 3,
+	"results": [
+		{
+			"id": "7fbab099-2b92-4dc4-9588-6b0ed57a22e8",
+			"name": "Parse CSV file content - valid file in base64",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/parse",
+			"time": 268,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Set invoice ID value": true
+			},
+			"testPassFailCounts": {
+				"Set invoice ID value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				268
+			],
+			"allTests": [
+				{
+					"Set invoice ID value": true
+				}
+			]
+		},
+		{
+			"id": "d1fe2d0e-4b4f-42b1-b16e-dfaae2eda776",
+			"name": "Parse CSV file content - invalid base64",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/parse",
+			"time": 274,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Assert error": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				274
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Assert error": true
+				}
+			]
+		},
+		{
+			"id": "9c526a3c-7d24-4b53-beaf-b8b33af8972b",
+			"name": "Parse CSV file content - invalid file format",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/parse",
+			"time": 3049,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code is 500": true,
+				"Assert invoice is not generated": true
+			},
+			"testPassFailCounts": {
+				"Status code is 500": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert invoice is not generated": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3049
+			],
+			"allTests": [
+				{
+					"Status code is 500": true,
+					"Assert invoice is not generated": true
+				}
+			]
+		},
+		{
+			"id": "a86ab7eb-62c0-4157-9d87-1fa7348d37cf",
+			"name": "Parse CSV file content - invalid date format",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/parse",
+			"time": 903,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Assert invoice is not generated": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert invoice is not generated": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				903
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Assert invoice is not generated": true
+				}
+			]
+		},
+		{
+			"id": "1a00f3b2-0d12-4c92-a44b-5cd2a3c04052",
+			"name": "Parse CSV file content - invalid billable hours format",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/parse",
+			"time": 810,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Assert invoice is not generated": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert invoice is not generated": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				810
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Assert invoice is not generated": true
+				}
+			]
+		},
+		{
+			"id": "4f07f8dd-8c72-4dd1-8c20-567519b3da02",
+			"name": "Parse CSV file content - future  date",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/parse",
+			"time": 277,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Assert invoice is not generated": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Assert invoice is not generated": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				277
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Assert invoice is not generated": false
+				}
+			]
+		},
+		{
+			"id": "f33b615b-c547-4b17-9390-1410773717a7",
+			"name": "Parse CSV file content - start time greater than end time  date Copy",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/parse",
+			"time": 260,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Assert invoice is not generated": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert invoice is not generated": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				260
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Assert invoice is not generated": true
+				}
+			]
+		},
+		{
+			"id": "228971a6-4ed7-4589-8683-6ee60b4ba859",
+			"name": "Parse CSV file content - blank file",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/parse",
+			"time": 277,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Assert invoice is not generated": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Assert invoice is not generated": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				277
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Assert invoice is not generated": true
+				}
+			]
+		},
+		{
+			"id": "c69a20b3-2de1-4538-8eec-1d2d3566030e",
+			"name": "Get Invoice Parsing Result by ID - valid",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/7a8c9e46-4556-41e6-849e-fdf845732d38",
+			"time": 190,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Validate items sent in file": true,
+				"Status code is 200": true,
+				"Set Company Name value": true
+			},
+			"testPassFailCounts": {
+				"Validate items sent in file": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Set Company Name value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				190
+			],
+			"allTests": [
+				{
+					"Validate items sent in file": true,
+					"Status code is 200": true,
+					"Set Company Name value": true
+				}
+			]
+		},
+		{
+			"id": "de617b80-4cee-471c-bfbd-c6ada96ded8a",
+			"name": "Get Invoice Parsing Result by ID - invalid",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/u89uew8fhidhfhedu",
+			"time": 281,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Assert no company value is returned": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert no company value is returned": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				281
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Assert no company value is returned": true
+				}
+			]
+		},
+		{
+			"id": "bd09215a-37c9-4948-8d6b-2a0d9f69ed6f",
+			"name": "Get Invoice Parsing Result by ID - blank",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice",
+			"time": 255,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Validate no invoice details is returned": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate no invoice details is returned": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				255
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Validate no invoice details is returned": true
+				}
+			]
+		},
+		{
+			"id": "36057901-94a0-465d-9f8b-48dd28d39b6e",
+			"name": "Get Company details from an Invoice - valid company name and invoice ID",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/7a8c9e46-4556-41e6-849e-fdf845732d38/company?companyName=Google",
+			"time": 267,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Assert response body contains totalAmount": true,
+				"Assert response body contains hoursworked": true,
+				"Assert response body contains employeeId": true,
+				"Assert response body contains ratePerHour": true,
+				"Assert response body contains name": true,
+				"Assert response body contains lineItems": true,
+				"Assert name passed is name returned": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Assert response body contains totalAmount": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert response body contains hoursworked": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert response body contains employeeId": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert response body contains ratePerHour": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert response body contains name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert response body contains lineItems": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert name passed is name returned": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				267
+			],
+			"allTests": [
+				{
+					"Assert response body contains totalAmount": true,
+					"Assert response body contains hoursworked": true,
+					"Assert response body contains employeeId": true,
+					"Assert response body contains ratePerHour": true,
+					"Assert response body contains name": true,
+					"Assert response body contains lineItems": true,
+					"Assert name passed is name returned": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "e8790b97-a8bb-4efb-b6be-587052aba978",
+			"name": "Get Company details from an Invoice - invalid company name",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/7a8c9e46-4556-41e6-849e-fdf845732d38/company?companyName=TEST",
+			"time": 284,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Assert response body contains error": true,
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Assert response body contains error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				284
+			],
+			"allTests": [
+				{
+					"Assert response body contains error": true,
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "dc1624dd-ff24-4fa6-b9ef-26248eb01f8f",
+			"name": "Get Company details from an Invoice - blank company name",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/7a8c9e46-4556-41e6-849e-fdf845732d38/company?companyName=",
+			"time": 520,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Assert response body contains error": true,
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Assert response body contains error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				520
+			],
+			"allTests": [
+				{
+					"Assert response body contains error": true,
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "154c7500-5e2c-44d5-a0a2-7fba5cecc825",
+			"name": "Get Company details from an Invoice - invalid  invoice id",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/0w0923029039/company?companyName=Google",
+			"time": 194,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Assert response body contains error": true,
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Assert response body contains error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				194
+			],
+			"allTests": [
+				{
+					"Assert response body contains error": true,
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "ddde006b-6075-47ed-8d96-1af7e69f9ebe",
+			"name": "Get Company details from an Invoice - blank  invoice id",
+			"url": "https://csvdemomockappp.bundlewallet.com/invoice/company?companyName=Google",
+			"time": 190,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Assert no company value is returned": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert no company value is returned": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				190
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Assert no company value is returned": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 8299,
+	"collection": {
+		"requests": [
+			{
+				"id": "7fbab099-2b92-4dc4-9588-6b0ed57a22e8",
+				"method": "POST"
+			},
+			{
+				"id": "d1fe2d0e-4b4f-42b1-b16e-dfaae2eda776",
+				"method": "POST"
+			},
+			{
+				"id": "9c526a3c-7d24-4b53-beaf-b8b33af8972b",
+				"method": "POST"
+			},
+			{
+				"id": "a86ab7eb-62c0-4157-9d87-1fa7348d37cf",
+				"method": "POST"
+			},
+			{
+				"id": "1a00f3b2-0d12-4c92-a44b-5cd2a3c04052",
+				"method": "POST"
+			},
+			{
+				"id": "4f07f8dd-8c72-4dd1-8c20-567519b3da02",
+				"method": "POST"
+			},
+			{
+				"id": "f33b615b-c547-4b17-9390-1410773717a7",
+				"method": "POST"
+			},
+			{
+				"id": "228971a6-4ed7-4589-8683-6ee60b4ba859",
+				"method": "POST"
+			},
+			{
+				"id": "c69a20b3-2de1-4538-8eec-1d2d3566030e",
+				"method": "GET"
+			},
+			{
+				"id": "de617b80-4cee-471c-bfbd-c6ada96ded8a",
+				"method": "GET"
+			},
+			{
+				"id": "bd09215a-37c9-4948-8d6b-2a0d9f69ed6f",
+				"method": "GET"
+			},
+			{
+				"id": "36057901-94a0-465d-9f8b-48dd28d39b6e",
+				"method": "GET"
+			},
+			{
+				"id": "e8790b97-a8bb-4efb-b6be-587052aba978",
+				"method": "GET"
+			},
+			{
+				"id": "dc1624dd-ff24-4fa6-b9ef-26248eb01f8f",
+				"method": "GET"
+			},
+			{
+				"id": "154c7500-5e2c-44d5-a0a2-7fba5cecc825",
+				"method": "GET"
+			},
+			{
+				"id": "ddde006b-6075-47ed-8d96-1af7e69f9ebe",
+				"method": "GET"
+			}
+		]
+	}
+}
